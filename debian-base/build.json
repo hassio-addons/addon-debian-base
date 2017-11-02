@@ -1,0 +1,11 @@
+{
+    "image": "hassioaddons/debian-base-{arch}",
+    "squash": true,
+    "build_from": {
+        "aarch64": "arm64v8/debian:stretch-slim",
+        "amd64": "debian:stretch-slim",
+        "armhf": "arm32v7/debian:stretch-slim",
+        "i386": "i386/debian:stretch-slim"
+    },
+    "args": {}
+}
