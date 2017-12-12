@@ -38,7 +38,7 @@ defaults: &defaults
                   -v ~/.docker:/root/.docker \
                   -v "$PWD":/docker \
                   hassioaddons/build-env:latest \
-                  --target debian-base \
+                  --target base \
                   --${ARCH} \
                   --git \
                   --push
@@ -48,7 +48,7 @@ defaults: &defaults
                   -v /var/run/docker.sock:/var/run/docker.sock \
                   -v "$PWD":/docker \
                   hassioaddons/build-env:latest \
-                  --target debian-base \
+                  --target base \
                   --git \
                   --${ARCH}
               fi
