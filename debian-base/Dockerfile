@@ -32,9 +32,7 @@ RUN \
     && curl -L -s "https://github.com/just-containers/s6-overlay/releases/download/v1.20.0.0/s6-overlay-${S6_ARCH}.tar.gz" \
         | tar zxvf - -C / \
     \
-    && mkdir -p \
-        /etc/cont-finish.d \
-        /etc/fix-attrs.d \
+    && mkdir -p /etc/fix-attrs.d \
     \
     && \
         if [ "${BUILD_ARCH}" != "armhf" ]; then \
