@@ -3,6 +3,7 @@ FROM ${BUILD_FROM}
 
 # Environment variables
 ENV \
+    DEBIAN_FRONTEND="noninteractive" \
     HOME="/root" \
     LANG="C.UTF-8" \
     PS1="$(whoami)@$(hostname):$(pwd)$ " \
