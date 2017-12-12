@@ -7,7 +7,14 @@ and this project adheres to [Semantic Versioning][semantic-versioning].
 
 ## Unreleased
 
+No unreleased changes yet.
+
+## [v0.1.0] (2017-12-13)
+
+### Added
+
 - Initial version
 
 [keep-a-changelog]: http://keepachangelog.com/en/1.0.0/
 [semantic-versioning]: http://semver.org/spec/v2.0.0.html
+[v0.1.0]: https://github.com/hassio-addons/addon-debian-base/tree/v0.1.0
