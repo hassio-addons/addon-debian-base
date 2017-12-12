@@ -4,6 +4,11 @@ defaults: &defaults
       image: circleci/classic:edge
     steps:
       - run:
+        name: Restart Docker with experimental features enabled
+        command: |
+          sudo sh -c 'echo '\''DOCKER_OPTS="--experimental=true"'\'' >> /etc/default/docker'
+          sudo service docker restart
+      - run:
           name: Check docker is running
           command: docker info
       - run:
@@ -24,6 +29,7 @@ defaults: &defaults
               then
                 docker run \
                   --privileged \
+                  -v /var/run/docker.sock:/var/run/docker.sock \
                   -v ~/.docker:/root/.docker \
                   -v "$PWD":/docker \
                   hassioaddons/build-env:latest \
@@ -34,6 +40,7 @@ defaults: &defaults
               else
                 docker run \
                   --privileged \
+                  -v /var/run/docker.sock:/var/run/docker.sock \
                   -v "$PWD":/docker \
                   hassioaddons/build-env:latest \
                   --target debian-base \
