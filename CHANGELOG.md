@@ -9,6 +9,23 @@ and this project adheres to [Semantic Versioning][semantic-versioning].
 
 No unreleased changes yet.
 
+## [v0.2.0] (2017-12-23)
+
+[Full Changelog][v0.1.0-v0.2.0]
+
+### Added
+
+- Adds version requirements checks for HA and Supervisor
+
+### Changed
+
+- Upgrades semver tool to v0.2.0
+- Prevent possible future Docker login issue
+
+### Fixes
+
+- Fixes issue in version check logic
+
 ## [v0.1.0] (2017-12-13)
 
 ### Added
@@ -17,4 +34,6 @@ No unreleased changes yet.
 
 [keep-a-changelog]: http://keepachangelog.com/en/1.0.0/
 [semantic-versioning]: http://semver.org/spec/v2.0.0.html
+[v0.1.0-v0.2.0]: https://github.com/hassio-addons/addon-base/compare/v0.1.0...v0.2.0
 [v0.1.0]: https://github.com/hassio-addons/addon-debian-base/tree/v0.1.0
+[v0.2.0]: https://github.com/hassio-addons/addon-debian-base/tree/v0.2.0
