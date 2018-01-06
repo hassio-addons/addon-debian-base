@@ -9,6 +9,16 @@ and this project adheres to [Semantic Versioning][semantic-versioning].
 
 No unreleased changes yet.
 
+## [v0.2.1] (2018-01-06)
+
+[Full Changelog][v0.2.0-v0.2.1]
+
+### Changed
+
+- Updated Bash Hass.io library to match Hass.io 0.79 API
+- Upgraded S6-overlay to v1.21.2.2
+- Updated maintenance year, it is 2018
+
 ## [v0.2.0] (2017-12-23)
 
 [Full Changelog][v0.1.0-v0.2.0]
@@ -36,4 +46,6 @@ No unreleased changes yet.
 [semantic-versioning]: http://semver.org/spec/v2.0.0.html
 [v0.1.0-v0.2.0]: https://github.com/hassio-addons/addon-base/compare/v0.1.0...v0.2.0
 [v0.1.0]: https://github.com/hassio-addons/addon-debian-base/tree/v0.1.0
+[v0.2.0-v0.2.1]: https://github.com/hassio-addons/addon-base/compare/v0.2.0...v0.2.1
 [v0.2.0]: https://github.com/hassio-addons/addon-debian-base/tree/v0.2.0
+[v0.2.1]: https://github.com/hassio-addons/addon-debian-base/tree/v0.2.1
