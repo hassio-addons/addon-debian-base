@@ -180,7 +180,7 @@ SOFTWARE.
 [patreon]: https://www.patreon.com/frenck
 [paypal-shield]: https://img.shields.io/badge/donate-paypal-blue.svg
 [paypal]: https://www.paypal.me/FranckNijhof
-[project-stage-shield]: https://img.shields.io/badge/Project%20Stage-Experimental-yellow.svg
+[project-stage-shield]: https://img.shields.io/badge/Project%20Stage-Production%20Ready-brightgreen.svg
 [reddit]: https://reddit.com/r/homeassistant
 [releases-shield]: https://img.shields.io/github/release/hassio-addons/addon-debian-base.svg
 [releases]: https://github.com/hassio-addons/addon-debian-base/releases

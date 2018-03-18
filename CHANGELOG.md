@@ -9,6 +9,14 @@ and this project adheres to [Semantic Versioning][semantic-versioning].
 
 No unreleased changes yet.
 
+## [v1.0.0] (2018-03-18)
+
+[Full Changelog][v0.2.2-v1.0.0]
+
+### Fixed
+
+- Fixes add-on banner throwing hassio.api.security warnings
+
 ## [v0.2.2] (2018-01-18)
 
 [Full Changelog][v0.2.1-v0.2.2]
@@ -59,4 +67,6 @@ No unreleased changes yet.
 [v0.2.0]: https://github.com/hassio-addons/addon-debian-base/tree/v0.2.0
 [v0.2.1-v0.2.2]: https://github.com/hassio-addons/addon-base/compare/v0.2.1...v0.2.2
 [v0.2.1]: https://github.com/hassio-addons/addon-debian-base/tree/v0.2.1
+[v0.2.2-v1.0.0]: https://github.com/hassio-addons/addon-base/compare/v0.2.2...v1.0.0
 [v0.2.2]: https://github.com/hassio-addons/addon-debian-base/tree/v0.2.2
+[v1.0.0]: https://github.com/hassio-addons/addon-debian-base/tree/v1.0.0
