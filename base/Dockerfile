@@ -1,4 +1,5 @@
 ARG BUILD_FROM=debian:stretch-slim
+# hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
 # Environment variables
@@ -20,12 +21,12 @@ RUN \
     apt-get update \
     \
     && apt-get install -y --no-install-recommends \
-        bash \
-        ca-certificates \
-        curl \
-        udev \
-        jq \
-        tzdata \
+        bash=4.4-5 \
+        ca-certificates=20161130+nmu1 \
+        curl=7.52.1-5+deb9u5 \
+        udev=232-25+deb9u3 \
+        jq=1.5+dfsg-1.3 \
+        tzdata=2018e-0+deb9u1 \
     \
     && if [ "${BUILD_ARCH}" = "i386" ]; then S6_ARCH="x86"; else S6_ARCH="${BUILD_ARCH}"; fi \
     \
@@ -51,9 +52,10 @@ RUN \
             rm -f /usr/bin/qemu-aarch64-static; \
         fi \
     \
-    && rm -f -r \
-        /tmp/* \
-        /var/lib/apt/lists/*
+    && rm -f -r /tmp/* \
+    && rm -rf /var/lib/apt/lists/* \
+    && rm -rf /var/lib/{apt,dpkg,cache,log}/* \
+    && rm -rf /var/{cache,log}/*
 
 # Entrypoint & CMD
 ENTRYPOINT [ "/init" ]
