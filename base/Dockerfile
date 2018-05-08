@@ -24,7 +24,6 @@ RUN \
         bash=4.4-5 \
         ca-certificates=20161130+nmu1 \
         curl=7.52.1-5+deb9u5 \
-        udev=232-25+deb9u3 \
         jq=1.5+dfsg-1.3 \
         tzdata=2018e-0+deb9u1 \
     \
@@ -41,6 +40,7 @@ RUN \
         | tar zxvf - -C /usr/bin/ \
     \
     && mkdir -p /etc/fix-attrs.d \
+    && mkdir -p /etc/services.d \
     \
     && \
         if [ "${BUILD_ARCH}" != "armhf" ]; then \
