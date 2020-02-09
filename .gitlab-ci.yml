@@ -10,8 +10,8 @@ variables:
   ADDON_PUBLISH: "false"
   ADDON_QEMU: "true"
 
-  ADDON_AARCH64_BASE: "arm64v8/debian:buster-20191224-slim"
-  ADDON_AMD64_BASE: "amd64/debian:buster-20191224-slim"
-  ADDON_ARMV7_BASE: "arm32v7/debian:buster-20191224-slim"
-  ADDON_I386_BASE: "i386/debian:buster-20191224-slim"
-  ADDON_ARMHF_BASE: "arm32v5/debian:buster-20191224-slim"
+  ADDON_AARCH64_BASE: "arm64v8/debian:buster-20200130-slim"
+  ADDON_AMD64_BASE: "amd64/debian:buster-20200130-slim"
+  ADDON_ARMV7_BASE: "arm32v7/debian:buster-20200130-slim"
+  ADDON_I386_BASE: "i386/debian:buster-20200130-slim"
+  ADDON_ARMHF_BASE: "arm32v5/debian:buster-20200130-slim"
