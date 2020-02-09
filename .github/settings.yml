@@ -1,8 +1,8 @@
 ---
 repository:
-  description: "Docker base images (Debian) - Community Hass.io Add-on for Home Assistant"
+  description: "Docker base images (Debian) - Community Home Assistant Add-ons"
   homepage: https://addons.community
-  topics: docker, hassio, hass, baseimage, baseimage-docker, home-automation, home-assistant, debian
+  topics: docker, baseimage, baseimage-docker, addons, homeassistant, home-assistant, debian
   private: false
   has_issues: true
   has_projects: false
