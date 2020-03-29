@@ -26,7 +26,7 @@ RUN \
     && apt-get install -y --no-install-recommends \
         bash=5.0-4 \
         ca-certificates=20190110 \
-        curl=7.64.0-4 \
+        curl=7.64.0-4+deb10u1 \
         jq=1.5+dfsg-2+b1 \
         tzdata=2019c-0+deb10u1 \
     \
