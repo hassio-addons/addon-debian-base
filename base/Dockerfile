@@ -28,7 +28,7 @@ RUN \
         ca-certificates=20190110 \
         curl=7.64.0-4+deb10u1 \
         jq=1.5+dfsg-2+b1 \
-        tzdata=2019c-0+deb10u1 \
+        tzdata=2020a-0+deb10u1 \
     \
     && S6_ARCH="${BUILD_ARCH}" \
     && if [ "${BUILD_ARCH}" = "i386" ]; then S6_ARCH="x86"; fi \
