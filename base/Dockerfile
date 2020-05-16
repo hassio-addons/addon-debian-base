@@ -1,4 +1,4 @@
-ARG BUILD_FROM=debian:buster-20200224-slim
+ARG BUILD_FROM=debian:buster-20200514-slim
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
