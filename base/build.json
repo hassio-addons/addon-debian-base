@@ -2,11 +2,11 @@
   "image": "hassioaddons/debian-base-{arch}",
   "squash": false,
   "build_from": {
-    "aarch64": "arm64v8/debian:buster-20201012-slim",
-    "amd64": "amd64/debian:buster-20201012-slim",
-    "armhf": "arm32v5/debian:buster-20201012-slim",
-    "armv7": "arm32v7/debian:buster-20201012-slim",
-    "i386": "i386/debian:buster-20201012-slim"
+    "aarch64": "arm64v8/debian:buster-20210111-slim",
+    "amd64": "amd64/debian:buster-20210111-slim",
+    "armhf": "arm32v5/debian:buster-20210111-slim",
+    "armv7": "arm32v7/debian:buster-20210111-slim",
+    "i386": "i386/debian:buster-20210111-slim"
   },
   "args": {}
 }
