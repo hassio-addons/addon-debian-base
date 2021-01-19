@@ -29,6 +29,7 @@ RUN \
         curl=7.64.0-4+deb10u1 \
         jq=1.5+dfsg-2+b1 \
         tzdata=2020e-0+deb10u1 \
+        openssl=1.1.1d-0+deb10u4 \
     \
     && S6_ARCH="${BUILD_ARCH}" \
     && if [ "${BUILD_ARCH}" = "i386" ]; then S6_ARCH="x86"; fi \
@@ -36,6 +37,7 @@ RUN \
     && if [ "${BUILD_ARCH}" = "armhf" ]; then S6_ARCH="armhf"; fi \
     \
     && echo "https://github.com/just-containers/s6-overlay/releases/download/v2.1.0.2/s6-overlay-${S6_ARCH}.tar.gz" \
+    && wget "https://github.com/just-containers/s6-overlay/releases/download/v2.1.0.2/s6-overlay-${S6_ARCH}.tar.gz" \
     && curl -L -v "https://github.com/just-containers/s6-overlay/releases/download/v2.1.0.2/s6-overlay-${S6_ARCH}.tar.gz" \
         | tar zxvf - -C / \
     \
