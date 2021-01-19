@@ -121,7 +121,7 @@ SOFTWARE.
 [armv7-shield]: https://img.shields.io/badge/armv7-yes-green.svg
 [bashio]: https://github.com/hassio-addons/bashio
 [commits-shield]: https://img.shields.io/github/commit-activity/y/hassio-addons/addon-debian-base.svg
-[commits]: https://github.com/hassio-addons/addon-debian-base/commits/master
+[commits]: https://github.com/hassio-addons/addon-debian-base/commits/main
 [contributors]: https://github.com/hassio-addons/addon-debian-base/graphs/contributors
 [discord-ha]: https://discord.gg/c5DvZ4e
 [discord-shield]: https://img.shields.io/discord/478094546522079232.svg
