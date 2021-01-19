@@ -30,12 +30,14 @@ RUN \
         jq=1.5+dfsg-2+b1 \
         tzdata=2020e-0+deb10u1 \
     \
+    && c_rehash \
+    \
     && S6_ARCH="${BUILD_ARCH}" \
     && if [ "${BUILD_ARCH}" = "i386" ]; then S6_ARCH="x86"; fi \
     && if [ "${BUILD_ARCH}" = "armv7" ]; then S6_ARCH="arm"; fi \
     && if [ "${BUILD_ARCH}" = "armhf" ]; then S6_ARCH="armhf"; fi \
     \
-    && curl -L -s "https://github.com/just-containers/s6-overlay/releases/download/v2.1.0.2/s6-overlay-${S6_ARCH}.tar.gz" \
+    && curl -L "https://github.com/just-containers/s6-overlay/releases/download/v2.1.0.2/s6-overlay-${S6_ARCH}.tar.gz" \
         | tar zxvf - -C / \
     \
     && mkdir -p /etc/fix-attrs.d \
@@ -63,6 +65,7 @@ ENTRYPOINT [ "/init" ]
 ARG BUILD_DATE
 ARG BUILD_REF
 ARG BUILD_VERSION
+ARG BUILD_REPOSITORY
 
 # Labels
 LABEL \
@@ -81,8 +84,8 @@ LABEL \
     org.opencontainers.image.authors="Franck Nijhof <frenck@addons.community>" \
     org.opencontainers.image.licenses="MIT" \
     org.opencontainers.image.url="https://addons.community" \
-    org.opencontainers.image.source="https://github.com/hassio-addons/addon-debian-base" \
-    org.opencontainers.image.documentation="https://github.com/hassio-addons/addon-debian-base/blob/master/README.md" \
+    org.opencontainers.image.source="https://github.com/${BUILD_REPOSITORY}" \
+    org.opencontainers.image.documentation="https://github.com/${BUILD_REPOSITORY}/blob/main/README.md" \
     org.opencontainers.image.created=${BUILD_DATE} \
     org.opencontainers.image.revision=${BUILD_REF} \
     org.opencontainers.image.version=${BUILD_VERSION}
