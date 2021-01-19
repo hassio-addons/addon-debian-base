@@ -20,7 +20,6 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 # Install base system
 ARG BUILD_ARCH=amd64
-# hadolint ignore=DL4001
 RUN \
     apt-get update \
     \
