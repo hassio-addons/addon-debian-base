@@ -31,6 +31,7 @@ RUN \
         jq=1.5+dfsg-2+b1 \
         tzdata=2020e-0+deb10u1 \
         openssl=1.1.1d-0+deb10u4 \
+        wget=1.20.1-1.1\
     \
     && S6_ARCH="${BUILD_ARCH}" \
     && if [ "${BUILD_ARCH}" = "i386" ]; then S6_ARCH="x86"; fi \
