@@ -33,6 +33,8 @@ RUN \
         openssl=1.1.1d-0+deb10u4 \
         wget=1.20.1-1.1\
     \
+    && c_rehash \
+    \
     && S6_ARCH="${BUILD_ARCH}" \
     && if [ "${BUILD_ARCH}" = "i386" ]; then S6_ARCH="x86"; fi \
     && if [ "${BUILD_ARCH}" = "armv7" ]; then S6_ARCH="arm"; fi \
