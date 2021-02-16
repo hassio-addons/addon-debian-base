@@ -28,7 +28,7 @@ RUN \
         ca-certificates=20200601~deb10u2 \
         curl=7.64.0-4+deb10u1 \
         jq=1.5+dfsg-2+b1 \
-        tzdata=2020e-0+deb10u1 \
+        tzdata=2021a-0+deb10u1 \
     \
     && c_rehash \
     \
