@@ -1,4 +1,4 @@
-ARG BUILD_FROM=debian:buster-20210208-slim
+ARG BUILD_FROM=debian:buster-20210329-slim
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
@@ -26,7 +26,7 @@ RUN \
     && apt-get install -y --no-install-recommends \
         bash=5.0-4 \
         ca-certificates=20200601~deb10u2 \
-        curl=7.64.0-4+deb10u1 \
+        curl=7.64.0-4+deb10u2 \
         jq=1.5+dfsg-2+b1 \
         tzdata=2021a-0+deb10u1 \
     \
