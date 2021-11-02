@@ -1,4 +1,4 @@
-ARG BUILD_FROM=debian:bullseye-20210927-slim
+ARG BUILD_FROM=debian:bullseye-20211011-slim
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
@@ -28,7 +28,7 @@ RUN \
         ca-certificates=20210119 \
         curl=7.74.0-1.3+b1 \
         jq=1.6-2.1 \
-        tzdata=2021a-1 \
+        tzdata=2021a-1+deb11u1 \
     \
     && c_rehash \
     \
