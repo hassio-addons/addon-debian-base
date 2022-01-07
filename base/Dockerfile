@@ -26,7 +26,7 @@ RUN \
     && apt-get install -y --no-install-recommends \
         bash=5.1-2+b3 \
         ca-certificates=20210119 \
-        curl=7.74.0-1.3+b1 \
+        curl=7.74.0-1.3+deb11u1 \
         jq=1.6-2.1 \
         tzdata=2021a-1+deb11u1 \
     \
