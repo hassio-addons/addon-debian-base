@@ -5,3 +5,5 @@ build_from:
   armhf: arm32v5/debian:bullseye-20220228-slim
   armv7: arm32v7/debian:bullseye-20220228-slim
   i386: i386/debian:bullseye-20220228-slim
+codenotary:
+  signer: codenotary@frenck.dev
