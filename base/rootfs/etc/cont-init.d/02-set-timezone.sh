@@ -4,7 +4,7 @@
 # Configures the timezone
 # ==============================================================================
 
-if bashio::var.not_empty "${TZ}"; then
+if ! bashio::var.is_empty "${TZ}"; then
     bashio::log.info "Configuring timezone"
 
     ln --symbolic --no-dereference --force "/usr/share/zoneinfo/${TZ}" /etc/localtime
