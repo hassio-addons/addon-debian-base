@@ -1,9 +1,9 @@
 ---
 build_from:
-  aarch64: arm64v8/debian:bullseye-20220328-slim
-  amd64: amd64/debian:bullseye-20220328-slim
-  armhf: arm32v5/debian:bullseye-20220328-slim
-  armv7: arm32v7/debian:bullseye-20220328-slim
-  i386: i386/debian:bullseye-20220328-slim
+  aarch64: arm64v8/debian:bullseye-20220527-slim
+  amd64: amd64/debian:bullseye-20220527-slim
+  armhf: arm32v5/debian:bullseye-20220527-slim
+  armv7: arm32v7/debian:bullseye-20220527-slim
+  i386: i386/debian:bullseye-20220527-slim
 codenotary:
   signer: codenotary@frenck.dev
