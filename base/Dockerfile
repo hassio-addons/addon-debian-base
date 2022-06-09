@@ -10,6 +10,7 @@ ENV \
     PS1="$(whoami)@$(hostname):$(pwd)$ " \
     S6_BEHAVIOUR_IF_STAGE2_FAILS=2 \
     S6_CMD_WAIT_FOR_SERVICES=1 \
+    S6_CMD_WAIT_FOR_SERVICES_MAXTIME=0 \
     TERM="xterm-256color"
 
 # Copy root filesystem
@@ -29,16 +30,27 @@ RUN \
         curl=7.74.0-1.3+deb11u1 \
         jq=1.6-2.1 \
         tzdata=2021a-1+deb11u3 \
+        xz-utils=5.2.5-2 \
     \
     && c_rehash \
     \
+    && S6_VERSION="3.1.0.1" \
     && S6_ARCH="${BUILD_ARCH}" \
-    && if [ "${BUILD_ARCH}" = "i386" ]; then S6_ARCH="x86"; fi \
-    && if [ "${BUILD_ARCH}" = "armv7" ]; then S6_ARCH="arm"; fi \
-    && if [ "${BUILD_ARCH}" = "armhf" ]; then S6_ARCH="armhf"; fi \
+    && if [ "${BUILD_ARCH}" = "i386" ]; then S6_ARCH="i686"; \
+    elif [ "${BUILD_ARCH}" = "amd64" ]; then S6_ARCH="x86_64"; \
+    elif [ "${BUILD_ARCH}" = "armv7" ]; then S6_ARCH="arm"; fi \
     \
-    && curl -L "https://github.com/just-containers/s6-overlay/releases/download/v2.2.0.3/s6-overlay-${S6_ARCH}.tar.gz" \
-        | tar zxvf - -C / \
+    && curl -L -s "https://github.com/just-containers/s6-overlay/releases/download/v${S6_VERSION}/s6-overlay-noarch.tar.xz" \
+        | tar -C / -Jxpf - \
+    \
+    && curl -L -s "https://github.com/just-containers/s6-overlay/releases/download/v${S6_VERSION}/s6-overlay-${S6_ARCH}.tar.xz" \
+        | tar -C / -Jxpf - \
+    \
+    && curl -L -s "https://github.com/just-containers/s6-overlay/releases/download/v${S6_VERSION}/s6-overlay-symlinks-noarch.tar.xz" \
+        | tar -C / -Jxpf - \
+    \
+    && curl -L -s "https://github.com/just-containers/s6-overlay/releases/download/v${S6_VERSION}/s6-overlay-symlinks-arch.tar.xz" \
+        | tar -C / -Jxpf - \
     \
     && mkdir -p /etc/fix-attrs.d \
     && mkdir -p /etc/services.d \
@@ -57,6 +69,9 @@ RUN \
         "https://github.com/home-assistant/tempio/releases/download/2021.09.0/tempio_${BUILD_ARCH}" \
     && chmod a+x /usr/bin/tempio \
     \
+    && apt-get purge -y --auto-remove \
+        xz-utils \
+    && apt-get clean \
     && rm -fr \
         /tmp/* \
         /var/{cache,log}/* \
