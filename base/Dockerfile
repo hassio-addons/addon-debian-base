@@ -34,7 +34,7 @@ RUN \
     \
     && c_rehash \
     \
-    && S6_VERSION="3.1.1.0" \
+    && S6_VERSION="3.1.1.1" \
     && S6_ARCH="${BUILD_ARCH}" \
     && if [ "${BUILD_ARCH}" = "i386" ]; then S6_ARCH="i686"; \
     elif [ "${BUILD_ARCH}" = "amd64" ]; then S6_ARCH="x86_64"; \
