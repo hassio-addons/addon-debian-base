@@ -25,7 +25,7 @@ RUN \
     apt-get update \
     \
     && apt-get install -y --no-install-recommends \
-        bash=5.1-2+b3 \
+        bash=5.1-2+deb11u1 \
         ca-certificates=20210119 \
         curl=7.74.0-1.3+deb11u1 \
         jq=1.6-2.1 \
