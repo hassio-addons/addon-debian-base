@@ -1,4 +1,4 @@
-ARG BUILD_FROM=debian:bullseye-20220801-slim
+ARG BUILD_FROM=debian:bullseye-20220912-slim
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
@@ -34,9 +34,9 @@ RUN \
     && apt-get install -y --no-install-recommends \
         bash=5.1-2+deb11u1 \
         ca-certificates=20210119 \
-        curl=7.74.0-1.3+deb11u2 \
+        curl=7.74.0-1.3+deb11u3 \
         jq=1.6-2.1 \
-        tzdata=2021a-1+deb11u4 \
+        tzdata=2021a-1+deb11u5 \
         xz-utils=5.2.5-2.1~deb11u1 \
     \
     && c_rehash \
