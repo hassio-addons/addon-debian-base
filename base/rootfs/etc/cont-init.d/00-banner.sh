@@ -3,6 +3,12 @@
 # Home Assistant Community Add-on: Base Images
 # Displays a simple add-on banner on startup
 # ==============================================================================
+
+# Exits early if not running as an add-on
+if bashio::var.is_empty "${SUPERVISOR_TOKEN}"; then
+    exit
+fi
+
 if bashio::supervisor.ping; then
     bashio::log.blue \
         '-----------------------------------------------------------'

@@ -3,6 +3,12 @@
 # Home Assistant Community Add-on: Base Images
 # Sets the log level correctly
 # ==============================================================================
+
+# Exits early if not running as an add-on
+if bashio::var.is_empty "${SUPERVISOR_TOKEN}"; then
+    exit
+fi
+
 declare log_level
 
 # Check if the log level configuration option exists
