@@ -5,7 +5,7 @@
 # ==============================================================================
 
 # Exits early if not running as an add-on
-if bashio::var.is_empty "${SUPERVISOR_TOKEN}"; then
+if bashio::var.is_empty "${SUPERVISOR_TOKEN:-}"; then
     exit
 fi
 
