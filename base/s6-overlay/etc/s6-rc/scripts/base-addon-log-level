@@ -1,4 +1,5 @@
 #!/command/with-contenv bashio
+# shellcheck shell=bash
 # ==============================================================================
 # Home Assistant Community Add-on: Base Images
 # Sets the log level correctly
@@ -9,7 +10,7 @@ declare log_level
 if bashio::config.exists log_level; then
 
     # Find the matching LOG_LEVEL
-    log_level=$(bashio::string.lower "$(bashio::config log_level)")
+    log_level=$(bashio::string.lower "$(bashio::config log_level)") 
     case "${log_level}" in
         all)
             log_level="${__BASHIO_LOG_LEVEL_ALL}"
