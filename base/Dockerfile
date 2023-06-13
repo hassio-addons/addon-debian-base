@@ -1,4 +1,4 @@
-ARG BUILD_FROM=debian:11.7-slim
+ARG BUILD_FROM=debian:12.0-slim
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
@@ -32,12 +32,12 @@ RUN \
     apt-get update \
     \
     && apt-get install -y --no-install-recommends \
-        bash=5.1-2+deb11u1 \
-        ca-certificates=20210119 \
-        curl=7.74.0-1.3+deb11u7 \
+        bash=5.2.15-2+b2 \
+        ca-certificates=20230311 \
+        curl=7.88.1-10 \
         jq=1.6-2.1 \
-        tzdata=2021a-1+deb11u10 \
-        xz-utils=5.2.5-2.1~deb11u1 \
+        tzdata=2023c-5 \
+        xz-utils=5.4.1-0.2 \
     \
     && c_rehash \
     \
