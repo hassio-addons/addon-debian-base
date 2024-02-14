@@ -1,4 +1,4 @@
-ARG BUILD_FROM=debian:12.4-slim
+ARG BUILD_FROM=debian:12.5-slim
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
