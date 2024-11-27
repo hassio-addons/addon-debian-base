@@ -27,7 +27,7 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 ARG BUILD_ARCH=amd64
 ARG BASHIO_VERSION="v0.16.2"
 ARG S6_OVERLAY_VERSION="3.2.0.2"
-ARG TEMPIO_VERSION="2021.09.0"
+ARG TEMPIO_VERSION="2024.11.2"
 RUN \
     apt-get update \
     \
