@@ -6,7 +6,6 @@ FROM ${BUILD_FROM}
 ENV \
     CARGO_NET_GIT_FETCH_WITH_CLI=true \
     DEBIAN_FRONTEND="noninteractive" \
-    HOME="/root" \
     LANG="C.UTF-8" \
     PIP_DISABLE_PIP_VERSION_CHECK=1 \
     PIP_NO_CACHE_DIR=1 \
