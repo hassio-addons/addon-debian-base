@@ -32,12 +32,12 @@ RUN \
     apt-get update \
     \
     && apt-get install -y --no-install-recommends \
-        bash=5.2.15-2+b7 \
-        ca-certificates=20230311+deb12u1 \
-        curl=7.88.1-10+deb12u12 \
-        jq=1.6-2.1 \
-        tzdata=2025b-0+deb12u1 \
-        xz-utils=5.4.1-1 \
+        bash=5.2.37-2+b5 \
+        ca-certificates=20250419 \
+        curl=8.14.1-2 \
+        jq=1.7.1-6+deb13u1 \
+        tzdata=2025b-4 \
+        xz-utils=5.8.1-1 \
     \
     && c_rehash \
     \
